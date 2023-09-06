@@ -8,8 +8,8 @@ import { Footer } from './components/footer/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Hobbymusik',
-  description: 'Musik ist unser Hobby',
+  title: 'hobbymusik',
+  description: 'musik ist unser hobby',
 };
 
 export default function RootLayout({
