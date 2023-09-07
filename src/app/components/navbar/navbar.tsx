@@ -8,7 +8,7 @@ export function NavBar() {
       <MenuItem href="/releases">Releases</MenuItem>
       <MenuItem href="#">Artists</MenuItem>
       <MenuItem href="#">Shop</MenuItem>
-      <MenuItem href="#">About</MenuItem>
+      <MenuItem href="/about">About</MenuItem>
       <MenuItem href="#">Contact</MenuItem>
     </ul>
   </nav>;
