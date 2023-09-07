@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'hobbymusik',
   description: 'musik ist unser hobby',
+  viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
 };
 
 export default function RootLayout({
