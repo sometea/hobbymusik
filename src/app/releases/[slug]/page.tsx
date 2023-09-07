@@ -18,6 +18,8 @@ export default function ReleaseSlug({ params }: { params: { slug: string }}) {
   </div>;
 }
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return staticReleases.map(release => ({ slug: release.slug }));
 }
