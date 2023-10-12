@@ -7,6 +7,7 @@ export interface ReleaseProps {
   slug: string;
   bandcampLink?: string;
   embedCode?: string;
+  type?: 'album' | 'single' | 'ep';
 }
 
 export const staticReleases: ReleaseProps[] = [
@@ -18,6 +19,7 @@ export const staticReleases: ReleaseProps[] = [
     slug: "ofelia-uzrukki",
     bandcampLink: "https://firstsnowoftheyear.bandcamp.com/track/kyoto-2",
     embedCode: "<iframe style=\"border: 0; width: 350px; height: 442px\" src=\"https://bandcamp.com/EmbeddedPlayer/track=1156693567/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/\" seamless><a href=\"https://firstsnowoftheyear.bandcamp.com/track/kyoto-2\">Kyoto by First Snow of The Year</a></iframe>",
+    type: "ep",
   },
   {
     title: "Ich hab die größte Vulva der Welt",
@@ -45,5 +47,6 @@ export const staticReleases: ReleaseProps[] = [
     slug: "beam-time",
     bandcampLink: "https://firstsnowoftheyear.bandcamp.com/track/kyoto-2",
     embedCode: "<iframe style=\"border: 0; width: 350px; height: 442px\" src=\"https://bandcamp.com/EmbeddedPlayer/track=1156693567/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/\" seamless><a href=\"https://firstsnowoftheyear.bandcamp.com/track/kyoto-2\">Kyoto by First Snow of The Year</a></iframe>",
+    type: "ep",
   },
 ];
