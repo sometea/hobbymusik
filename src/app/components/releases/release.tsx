@@ -9,7 +9,7 @@ export function Release({ title, artist, description = '', year, cover, slug }: 
     </Link>
     <div className="pb-2 w-full text-center">{shortenedTitle}</div>
     <div className="text-sm pb-2">{artist}</div>
-    <div className="text-sm pb-2 w-full text-right border-b-2">{year.getFullYear()}</div>
+    <div className="text-sm pb-2 w-full text-right border-t-2">{year.getFullYear()}</div>
     <div className="text-sm mb-8 lg:mb-16">{description}</div>
   </div>;
 }
