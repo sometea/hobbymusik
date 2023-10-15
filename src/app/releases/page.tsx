@@ -1,11 +1,14 @@
 import { Release } from "../components/releases/release";
 import { ReleaseList } from "../components/releases/releaselist";
-import { staticReleases } from "../data/releases";
+import { fetchReleases } from "../data/releases";
 
-export default function Releases() {
+export const revalidate = 60;
+
+export default async function Releases() {
+  const releases = await fetchReleases();
   return <div>
     <ReleaseList>
-      {staticReleases.map((release, index) => <Release key={index} {...release} />)}
+      {releases.map((release, index) => <Release key={index} {...release} />)}
     </ReleaseList>
   </div>;
 }

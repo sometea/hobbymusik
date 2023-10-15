@@ -5,6 +5,9 @@ import { ReactNode } from 'react';
 import { NavBar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 
+import * as admin from 'firebase-admin';
+import { applicationDefault } from 'firebase-admin/app';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -12,6 +15,15 @@ export const metadata: Metadata = {
   description: 'musik ist unser hobby',
   viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
 };
+
+try {
+  admin.initializeApp({
+    credential: applicationDefault(),
+    projectId: 'hobbymusik-42231',
+  });
+} catch (error) {
+  console.log('Ignoring firebase init error, probably ran already...');
+}
 
 export default function RootLayout({
   children,

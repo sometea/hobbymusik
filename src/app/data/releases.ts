@@ -1,3 +1,6 @@
+import { cache } from "react";
+import { DocumentData, QueryDocumentSnapshot, getFirestore } from "firebase-admin/firestore";
+
 export interface ReleaseProps {
   title: string;
   artist: string;
@@ -9,6 +12,32 @@ export interface ReleaseProps {
   embedCode?: string;
   type?: 'album' | 'single' | 'ep';
 }
+
+const db = getFirestore();
+
+function mapRelease(doc: QueryDocumentSnapshot<DocumentData>): ReleaseProps {
+  return {
+    title: doc.get('title'),
+    cover: doc.get('coverUrl'),
+    artist: doc.get('artist'),
+    year: doc.get('date').toDate(),
+    slug: doc.get('slug'),
+    bandcampLink: doc.get('bandcampLink'),
+    embedCode: doc.get('embedCode'),
+    type: doc.get('type'),
+  }
+}
+
+export const fetchReleases: () => Promise<ReleaseProps[]> = cache(async () => {
+  const releases = await db.collection('releases').orderBy('date', 'desc').get();
+  return releases.docs.map(mapRelease);
+});
+
+export const fetchReleaseBySlug: (slug: string) => Promise<ReleaseProps> = cache(async (slug: string) => {
+  const release = await db.collection('releases').where('slug', '==', slug).get();
+  if (release.docs.length === 0) throw new Error('Release not found');
+  return mapRelease(release.docs[0]);
+});
 
 export const staticReleases: ReleaseProps[] = [
   {

@@ -1,9 +1,13 @@
-import { staticReleases } from "@/app/data/releases";
+import { fetchReleaseBySlug, fetchReleases } from "@/app/data/releases";
 import Link from "next/link";
 
-export default function ReleaseSlug({ params }: { params: { slug: string } }) {
+export const dynamicParams = false;
+
+export const revalidate = 60;
+
+export default async function ReleaseSlug({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const release = staticReleases.find(release => release.slug === slug);
+  const release = await fetchReleaseBySlug(slug);
   if (!release) return <div>Release not found</div>;
   return <div className="flex flex-col lg:flex-row w-full">
     <div className="w-full lg:w-1/3">
@@ -26,8 +30,7 @@ export default function ReleaseSlug({ params }: { params: { slug: string } }) {
   </div>;
 }
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return staticReleases.map(release => ({ slug: release.slug }));
+export async function generateStaticParams() {
+  const releases = await fetchReleases();
+  return releases.map(release => ({ slug: release.slug }));
 }

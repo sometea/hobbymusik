@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "hobbymusik-42231",
     "source": ".",
     "ignore": [
       "firebase.json",
