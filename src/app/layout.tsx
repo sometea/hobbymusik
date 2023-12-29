@@ -1,5 +1,5 @@
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 import { NavBar } from './components/navbar/navbar';
@@ -13,8 +13,12 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'hobbymusik',
   description: 'musik ist unser hobby',
-  viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 try {
   admin.initializeApp({
