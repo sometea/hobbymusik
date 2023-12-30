@@ -1,5 +1,5 @@
 export default function Contact() {
-  return <div>
+  return <div className="font-mono">
     Contact us at: info at hobbymusik dot net.
     </div>;
 }

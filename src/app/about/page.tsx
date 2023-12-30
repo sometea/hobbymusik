@@ -1,5 +1,5 @@
 export default function About() {
-  return <div>
+  return <div className="font-mono">
     Aus Spaß an der Freude haben wir Musik zu unserem Hobby gemacht. 
     Deshalb gründen wir ein neues und bewusst uncooles Plattenlabel. 
     Es heißt Hobby-Musik, weil wir es blöd finden, dass Unprofessionalität 
