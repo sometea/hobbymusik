@@ -29,13 +29,11 @@ function mapRelease(doc: QueryDocumentSnapshot<DocumentData>): ReleaseProps {
 }
 
 export const fetchReleases: () => Promise<ReleaseProps[]> = cache(async () => {
-  console.log('fetching releases from firestore...');
   const releases = await db.collection('releases').orderBy('date', 'desc').get();
   return releases.docs.map(mapRelease);
 });
 
 export const fetchReleaseBySlug: (slug: string) => Promise<ReleaseProps> = cache(async (slug: string) => {
-  console.log(`fetching release by slug ${slug} from firestore...`);
   const release = await db.collection('releases').where('slug', '==', slug).get();
   if (release.docs.length === 0) throw new Error('Release not found');
   return mapRelease(release.docs[0]);
