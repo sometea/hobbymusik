@@ -1,3 +1,4 @@
+import { BandCampPlayer } from "@/app/components/bandcampplayer/bandcampplayer";
 import { fetchReleaseBySlug, fetchReleases } from "@/app/data/releases";
 import Link from "next/link";
 
@@ -23,8 +24,7 @@ export default async function ReleaseSlug({ params }: { params: { slug: string }
         <div className="p-2"><Link href={release.bandcampLink} target="_blank">Bandcamp</Link></div>
       </>}
       <div className="font-bold p-2 mt-8 border-t-2">Listen</div>
-      <div className="p-2" dangerouslySetInnerHTML={{ __html: release.embedCode || "" }}>
-      </div>
+      <BandCampPlayer embedCode={release.embedCode} />
       <div className="font-bold p-2 py-8"><Link href="/releases">Back</Link></div>
     </div>
   </div>;

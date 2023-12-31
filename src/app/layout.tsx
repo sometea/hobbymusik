@@ -7,6 +7,7 @@ import { Footer } from './components/footer/footer';
 
 import * as admin from 'firebase-admin';
 import { applicationDefault } from 'firebase-admin/app';
+import { CookieBar } from './components/cookiebar/cookiebar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main className="flex min-h-[50vh] flex-col items-start justify-between p-8 lg:px-24 lg:max-w-6xl">
           {children}
         </main>
+        <CookieBar />
         <Footer />
       </body>
     </html>
