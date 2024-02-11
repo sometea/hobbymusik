@@ -12,11 +12,11 @@ export default async function Home() {
     <div>
       <img src="/lamp.jpeg" alt="lamp" />
     </div>
-    <div className="flex flex-col justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit static w-auto max-w-96 ml-2 rounded-xl border bg-gray-200 p-4">
-      {news.map(n => <div key={n.title}>
+    <div className="flex-row">
+    {news.map(n => <div key={`news-${n.title}`} className="flex flex-col justify-center mb-4 border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit static w-auto max-w-96 ml-2 rounded-xl border bg-gray-200 p-4">
         <div className="mb-2">{formatDate(n.date)} - <span className="font-bold">{ n.title }</span></div>
         <div>{ n.text }</div>
-      </div>)}
+    </div>)}
     </div>
   </div>
 }
