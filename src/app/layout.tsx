@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 import { NavBar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 
-import * as admin from 'firebase-admin';
+import { initializeApp } from 'firebase-admin/app';
 import { applicationDefault } from 'firebase-admin/app';
 import { CookieBar } from './components/cookiebar/cookiebar';
 
@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 }
 
 try {
-  admin.initializeApp({
+  initializeApp({
     credential: applicationDefault(),
     projectId: 'hobbymusik-42231',
   });
