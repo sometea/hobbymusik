@@ -16,4 +16,13 @@ export function Release({ title, artist, year, cover, slug, type, linkPrefix = '
   </div>;
 }
 
-export const ArchiveRelease = (props: ArchiveReleaseProps) => Release({...props, linkPrefix: 'archive' });
+export function ArchiveRelease({ title, artist, year, cover, slug, type, linkPrefix = 'archive' }: GeneralisedReleaseProps) {
+  const shortenedTitle = title.length > 32 ? title.substring(0, 32) + '...' : title;
+  return <div className="flex flex-col items-start w-full lg:w-1/3 p-2">
+    <Link href={`/${linkPrefix}/${slug}`}>
+      <div className="pb-2 w-full text-center">{shortenedTitle}</div>
+    </Link>
+    <div className="text-sm pb-2">{artist} ({year.getFullYear()})</div>
+    {type && <div className="text-sm mb-8 lg:mb-16 w-full text-right">{type}</div>}
+  </div>;
+}
