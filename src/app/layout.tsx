@@ -5,8 +5,6 @@ import { ReactNode } from 'react';
 import { NavBar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 
-import { initializeApp } from 'firebase-admin/app';
-import { applicationDefault } from 'firebase-admin/app';
 import { CookieBar } from './components/cookiebar/cookiebar';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,15 +17,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-}
-
-try {
-  initializeApp({
-    credential: applicationDefault(),
-    projectId: 'hobbymusik-42231',
-  });
-} catch (error) {
-  console.log('Ignoring firebase init error, probably ran already...');
 }
 
 export default function RootLayout({

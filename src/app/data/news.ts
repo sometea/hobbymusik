@@ -1,5 +1,8 @@
+import { initializeApp } from "firebase-admin";
+import { applicationDefault } from "firebase-admin/app";
 import { DocumentData, QueryDocumentSnapshot, getFirestore } from "firebase-admin/firestore";
 import { cache } from "react";
+import { initAdmin } from "./firebase-admin";
 
 export interface News {
   title: string;
@@ -7,7 +10,7 @@ export interface News {
   text?: string;
 }
 
-const db = getFirestore();
+const db = getFirestore(initAdmin());
 
 function mapNews(doc: QueryDocumentSnapshot<DocumentData>): News {
   return {

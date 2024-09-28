@@ -1,5 +1,6 @@
 import { cache } from "react";
 import { DocumentData, QueryDocumentSnapshot, getFirestore } from "firebase-admin/firestore";
+import { initAdmin } from "./firebase-admin";
 
 export interface ReleaseProps {
   title: string;
@@ -22,7 +23,7 @@ export interface ArchiveReleaseProps {
   downloadUrl?: string;
 }
 
-const db = getFirestore();
+const db = getFirestore(initAdmin());
 
 function mapRelease(doc: QueryDocumentSnapshot<DocumentData>): ReleaseProps {
   return {
