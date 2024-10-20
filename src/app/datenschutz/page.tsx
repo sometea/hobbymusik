@@ -1,5 +1,5 @@
 export default function Datenschutz() {
-  return <div className="flex flex-col font-mono text-xs">
+  return <div className="flex flex-col text-xs">
   <h1 className="text-2xl uppercase my-12">Datenschutz</h1>
   <h2 className="text-xl uppercase my-2">1. DATENSCHUTZ AUF EINEN BLICK</h2>
   <h3 className="text-xl uppercase my-2">ALLGEMEINE HINWEISE</h3>

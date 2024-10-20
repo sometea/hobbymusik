@@ -7,7 +7,7 @@ import { Footer } from './components/footer/footer';
 
 import { CookieBar } from './components/cookiebar/cookiebar';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'hobbymusik',
@@ -26,9 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <header><NavBar /></header>
-        <main className="flex min-h-[50vh] flex-col items-start justify-between p-8 lg:px-24 lg:max-w-6xl">
+        <main className={`${inter.variable} font-sans flex min-h-[50vh] flex-col items-start justify-between lg:px-24 lg:max-w-4xl`}>
           {children}
         </main>
         <CookieBar />

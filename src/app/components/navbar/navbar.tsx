@@ -14,7 +14,6 @@ export function NavBar() {
     <ul className="font-bold text-xl">
       <MenuItem href="/releases">Releases</MenuItem>
       <MenuItem href="https://hobbyhobbymusik.bandcamp.com" target="_blank">Shop</MenuItem>
-      <MenuItem href="/about">About</MenuItem>
       <MenuItem href="/contact">Contact</MenuItem>
     </ul>
   </nav>;

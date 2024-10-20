@@ -1,22 +1,21 @@
-import { fetchNews } from "./data/news";
-
-export const revalidate = 180;
-
-function formatDate(d: Date): string {
-  return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
-}
 
 export default async function Home() {
-  const news = await fetchNews();
-  return <div className="z-10 max-w-3xl w-full items-start justify-between font-mono text-sm lg:flex">
-    <div>
+  return <div className="z-10 max-w-3xl w-full items-start justify-between text-sm lg:flex">
+    <div className="min-w-fit">
       <img src="/lamp.jpeg" alt="lamp" />
     </div>
-    <div className="flex-row mt-4">
-    {news.map(n => <div key={`news-${n.title}`} className="flex flex-col justify-center mb-4 border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit static w-auto max-w-96 ml-2 rounded-xl border bg-gray-200 p-4">
-        <div className="mb-2">{formatDate(n.date)} - <span className="font-bold">{ n.title }</span></div>
-        <div>{ n.text }</div>
-    </div>)}
+    <div className="mt-4 ml-4">
+      <p className="font-bold mb-4">Wir haben ein Plattenlabel gegründet. Es trägt den Namen Hobbymusik. Das hat Gründe.</p>
+      <p className="mb-4">
+        Es ist zum Beispiel ein Verweis auf systemische und ökonomische Rahmenbedingungen der Kunst- und Musikproduktion 
+        oder die Tatsache, dass unbezahlte Arbeit oft nur gering geschätzt wird. Wir von Hobbymusik reagieren darauf unter 
+        anderem damit, dass wir die Entkopplung von professioneller Kunst und Professionalität ausrufen. Wir fragen uns 
+        auch, wer es sich leisten kann, als professionell zu gelten. Außerdem interessieren wir uns für anti-patriarchale Themen.
+      </p>
+      <p className="mb-4">
+        Mit Antihumor oder Humor, Drastik und Mäßigung, Freude, Depression, Gleichmut und Gelassenheit bespielen 
+        wir so gemeinsam mit unseren Musiker*innen die physischen und digitalen Bühnen.
+      </p>
     </div>
   </div>
 }
