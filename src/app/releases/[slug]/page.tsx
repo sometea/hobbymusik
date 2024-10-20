@@ -2,9 +2,9 @@ import { BandCampPlayer } from "@/app/components/bandcampplayer/bandcampplayer";
 import { fetchReleaseBySlug, fetchReleases } from "@/app/data/releases";
 import Link from "next/link";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
-export const revalidate = 60;
+export const revalidate = 180;
 
 export default async function ReleaseSlug({ params }: { params: { slug: string } }) {
   const { slug } = params;
