@@ -12,7 +12,7 @@ export function Release({ title, artist, year, cover, slug, type, releaseNumber,
     <div className="pb-2 w-full font-bold text-center">{shortenedTitle}</div>
     <div className="text-sm font-semibold pb-2">{artist}</div>
     <div className="text-sm pt-2 w-48 lg:w-full border-t-2 border-black font-semibold flex items-start justify-between">
-      <div className="border border-black">hm{ releaseNumber }</div>
+      <div className="border border-black">hm{ String(releaseNumber).padStart(3, '0') }</div>
       <div>
         {type && <div>{type}</div>}
         <div>{year.getFullYear()}</div>
