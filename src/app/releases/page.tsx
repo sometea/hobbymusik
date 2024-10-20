@@ -1,3 +1,4 @@
+import { ArchiveList } from "../components/releases/archivelist";
 import { ArchiveRelease, Release } from "../components/releases/release";
 import { ReleaseList } from "../components/releases/releaselist";
 import { fetchArchiveReleases, fetchReleases } from "../data/releases";
@@ -12,8 +13,8 @@ export default async function Releases() {
       {releases.map((release, index) => <Release key={`release-${index}`} {...release} />)}
     </ReleaseList>
     <h2 className="mb-12 mt-48">Archive</h2>
-    <ReleaseList>
+    <ArchiveList>
       {archiveReleases.map((release, index) => <ArchiveRelease key={`archive-${index}`} {...release} />)}
-    </ReleaseList>
+    </ArchiveList>
   </div>;
 }
