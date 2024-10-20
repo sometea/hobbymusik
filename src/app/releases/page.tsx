@@ -12,7 +12,7 @@ export default async function Releases() {
     <ReleaseList>
       {releases.map((release, index) => <Release key={`release-${index}`} {...release} />)}
     </ReleaseList>
-    <h2 className="mb-12 mt-48">Archive</h2>
+    <h2 className="px-6 lg:px-2 mt-48 font-bold">Archive</h2>
     <ArchiveList>
       {archiveReleases.map((release, index) => <ArchiveRelease key={`archive-${index}`} {...release} />)}
     </ArchiveList>

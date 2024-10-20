@@ -10,6 +10,8 @@ export interface ReleaseProps {
   cover: string;
   slug: string;
   bandcampLink?: string;
+  spotifyLink?: string;
+  releaseNumber?: number;
   embedCode?: string;
   type?: 'album' | 'single' | 'ep';
 }
@@ -35,6 +37,8 @@ function mapRelease(doc: QueryDocumentSnapshot<DocumentData>): ReleaseProps {
     bandcampLink: doc.get('bandcampLink'),
     embedCode: doc.get('embedCode'),
     type: doc.get('type'),
+    spotifyLink: doc.get('spotifyLink'),
+    releaseNumber: doc.get('releaseNumber')
   }
 }
 
