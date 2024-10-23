@@ -59,7 +59,7 @@ export const fetchArchiveReleases: () => Promise<ArchiveReleaseProps[]> = cache(
 });
 
 export const fetchReleases: () => Promise<ReleaseProps[]> = cache(async () => {
-  const releases = await db.collection('releases').orderBy('date', 'desc').get();
+  const releases = await db.collection('releases').orderBy('releaseNumber', 'desc').get();
   return releases.docs.map(mapRelease);
 });
 

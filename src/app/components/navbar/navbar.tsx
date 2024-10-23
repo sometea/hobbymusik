@@ -3,7 +3,7 @@ import { MenuItem } from "./menuitem";
 
 export function NavBar() {
   return <nav className="flex flex-row items-center">
-    <div className="p-2 lg:p-8">
+    <div className="p-2 lg:p-8 lg:px-24">
       <Link href="/">
       <picture className="w-96">
         <source srcSet="/logo-dark.png" media="(prefers-color-scheme: dark)" />

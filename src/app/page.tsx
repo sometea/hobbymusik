@@ -1,6 +1,6 @@
 
 export default async function Home() {
-  return <div className="z-10 max-w-3xl w-full items-start justify-between text-sm lg:flex">
+  return <div className="z-10 w-full items-start justify-between text-sm lg:flex">
     <div className="min-w-fit">
       <img src="/lamp.jpeg" alt="lamp" />
     </div>
