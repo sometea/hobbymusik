@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header><NavBar /></header>
-        <main className={`${inter.variable} font-sans flex min-h-[50vh] flex-col items-start justify-between lg:px-24 lg:max-w-[58rem]`}>
+        <main className={`${inter.variable} font-sans flex min-h-[50vh] flex-col items-start justify-between px-4 lg:px-24 lg:max-w-[58rem]`}>
           {children}
         </main>
         <CookieBar />

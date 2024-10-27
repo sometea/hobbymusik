@@ -10,7 +10,7 @@ export default async function ReleaseSlug({ params }: { params: { slug: string }
   const { slug } = params;
   const release = await fetchReleaseBySlug(slug);
   if (!release) return <div>Release not found</div>;
-  return <div className="flex flex-col lg:flex-row gap-4 w-full px-4 lg:px-0">
+  return <div className="flex flex-col lg:flex-row gap-4 w-full">
     <div className="w-full lg:w-1/3">
       <img src={release.cover} alt={release.title} className="w-full lg:w-64 mb-2 lg:mb-4 border-2 border-black" />
     </div>

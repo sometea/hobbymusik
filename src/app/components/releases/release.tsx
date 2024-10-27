@@ -22,7 +22,7 @@ export function Release({ title, artist, year, cover, slug, type, releaseNumber,
 }
 
 export function ArchiveRelease({ title, artist, year, slug, type, linkPrefix = 'archive' }: GeneralisedReleaseProps) {
-  return <Link href={`/${linkPrefix}/${slug}`} className="flex flex-row items-center gap-4 w-full p-2">
+  return <Link href={`/${linkPrefix}/${slug}`} className="flex flex-row items-start justify-between gap-4 w-full p-2">
       <div className="lg:w-[24rem]">{title}</div>
       <div className="text-sm lg:w-[12rem]">{artist}</div>
       <div className="text-sm">({year.getFullYear()})</div>
