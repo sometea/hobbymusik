@@ -1,7 +1,7 @@
 export default function Contact() {
   return <div>
     <div className="m-8 lg:mx-0">
-      <p className="mb-4">
+      <p className="mb-4 font-semibold">
         Falls du Hobbymusik magst und uns das sagen willst, kontaktiere uns am
         besten per E-Mail. Falls du konstruktive Kritik loswerden willst oder
         weitere Fragen zu uns, unseren Releases oder unseren Künstler*innen hast,
@@ -14,11 +14,11 @@ export default function Contact() {
         gleich einen Link zu deiner Musik oder Kunst hinzu. Bitte schicke keine großen
         Dateien (wie mp3s) per E-Mail.
       </p>
-      <p className="mb-4">
+      <p className="mb-4 font-semibold">
         Unsere Adresse lautet: info at hobbymusik punkt net.
       </p>
     </div>
-    <div className="text-xs">
+    <div className="m-8 lg:mx-0 text-xs">
       Inhaltlich verantwortlich: David Dasenbrook, Sachsenring 67, 50677 Köln.
       Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir
       keine Haftung für die Inhalte externer Links.
