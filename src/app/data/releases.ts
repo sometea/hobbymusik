@@ -10,9 +10,12 @@ export interface ReleaseProps {
   cover: string;
   slug: string;
   bandcampLink?: string;
+  artistLink?: string;
   spotifyLink?: string;
   releaseNumber?: number;
   embedCode?: string;
+  copyright?: string;
+  notes?: string;
   type?: 'album' | 'single' | 'ep';
 }
 
@@ -35,10 +38,13 @@ function mapRelease(doc: QueryDocumentSnapshot<DocumentData>): ReleaseProps {
     year: doc.get('date').toDate(),
     slug: doc.get('slug'),
     bandcampLink: doc.get('bandcampLink'),
+    artistLink: doc.get('artistLink'),
     embedCode: doc.get('embedCode'),
     type: doc.get('type'),
     spotifyLink: doc.get('spotifyLink'),
-    releaseNumber: doc.get('releaseNumber')
+    releaseNumber: doc.get('releaseNumber'),
+    copyright: doc.get('copyright'),
+    notes: doc.get('notes')
   }
 }
 

@@ -10,7 +10,7 @@ export default async function Releases() {
   const archiveReleases = await fetchArchiveReleases();
   return <div>
     <ReleaseList>
-      {releases.map((release, index) => <Release key={`release-${index}`} {...release} />)}
+      {releases.map((release, index) =>(release.year <= new Date() && <Release key={`release-${index}`} {...release} />))}
     </ReleaseList>
     <h2 className="px-6 lg:px-2 mt-64 font-bold border-t-black border-t-2">Archive</h2>
     <ArchiveList>

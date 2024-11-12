@@ -1,4 +1,5 @@
 import { BandCampPlayer } from "@/app/components/bandcampplayer/bandcampplayer";
+import { ReleaseNumber } from "@/app/components/releasenumber/releasenumber";
 import { fetchReleaseBySlug, fetchReleases } from "@/app/data/releases";
 import Link from "next/link";
 
@@ -15,13 +16,19 @@ export default async function ReleaseSlug({ params }: { params: { slug: string }
       <img src={release.cover} alt={release.title} className="w-full lg:w-64 mb-2 lg:mb-4 border-2 border-black" />
     </div>
     <div className="flex flex-col w-full lg:w-2/3">
-      <div className="text-lg font-bold p-2">{release.title}</div>
+      <div className="flex flex-row justify-between items-center">
+        <div className="text-lg font-bold p-2">{release.title}</div>
+        <ReleaseNumber releaseNumber={release.releaseNumber} />
+      </div>
+      
       <div className="p-2">{release.artist}</div>
       <div className="p-2">{release.year.getFullYear()}</div>
-      {release.description && <div className="p-2 border-t-2">{release.description}</div>}
+      {release.notes && <pre className="p-2 font-sans">{release.notes}</pre>}
+      {release.copyright && <div className="p-2">{release.copyright}</div>}
       {release.bandcampLink && <>
-        <div className="font-bold p-2 mt-8 border-t-2 border-black">Get it on</div>
+        <div className="font-bold p-2 mt-8 border-t-2 border-black">Links</div>
         <div className="p-2"><Link href={release.bandcampLink} target="_blank">Bandcamp</Link></div>
+        {release.artistLink && <div className="p-2"><Link href={release.artistLink} target="_blank">Artist Link</Link></div>}
       </>}
       <div className="font-bold p-2 mt-8 border-t-2 border-black">Listen</div>
       <BandCampPlayer embedCode={release.embedCode} />
