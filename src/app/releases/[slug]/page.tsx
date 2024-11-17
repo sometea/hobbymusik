@@ -7,6 +7,16 @@ export const dynamicParams = true;
 
 export const revalidate = 180;
 
+function getArtistLinkText(href: string): string {
+  if (href.includes('instagram.com')) {
+    return 'Instagram';
+  }
+  if (href.includes('facebook.com')) {
+    return 'Facebook';
+  }
+  return 'Artist Link';
+}
+
 export default async function ReleaseSlug({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const release = await fetchReleaseBySlug(slug);
@@ -28,7 +38,7 @@ export default async function ReleaseSlug({ params }: { params: { slug: string }
       {release.bandcampLink && <>
         <div className="font-bold p-2 mt-8 border-t-2 border-black">Links</div>
         <div className="p-2"><Link href={release.bandcampLink} target="_blank">Bandcamp</Link></div>
-        {release.artistLink && <div className="p-2"><Link href={release.artistLink} target="_blank">Artist Link</Link></div>}
+        {release.artistLink && <div className="p-2"><Link href={release.artistLink} target="_blank">{ getArtistLinkText(release.artistLink) }</Link></div>}
       </>}
       <div className="font-bold p-2 mt-8 border-t-2 border-black">Listen</div>
       <BandCampPlayer embedCode={release.embedCode} />
