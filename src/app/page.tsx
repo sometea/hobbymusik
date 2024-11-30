@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default async function Home() {
   return <div className="z-10 w-full items-start justify-between text-sm lg:flex">
@@ -15,6 +16,9 @@ export default async function Home() {
       <p className="mb-4">
         Mit Antihumor oder Humor, Drastik und Mäßigung, Freude, Depression, Gleichmut und Gelassenheit bespielen 
         wir so gemeinsam mit unseren Musiker*innen die physischen und digitalen Bühnen.
+      </p>
+      <p className="mb-4">
+        <Link className="font-bold" href="/guidelines">Zu den Guidelines</Link>
       </p>
     </div>
   </div>
