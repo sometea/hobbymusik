@@ -23,12 +23,10 @@ export default async function Guidelines() {
         mit welchen Künstler*innen wir zusammen arbeiten. Dabei sind wir mit unseren eigenen Communities 
         in Verbindung und mit solchen, mit denen wir uns solidarisieren. Weiterhin weisen wir darauf hin, 
         dass unsere Kapazitäten begrenzt sind. Wir verdienen mit unseren Aktivitäten kaum oder kein Geld 
-        und wir können nicht immer jede Situation einschätzen. Wir versuchen es trotzdem. Weiterhin wollen 
-        wir in erster Linie Musik veröffentlichen und darüber hinaus ein paar Konzerte organisieren. Also 
-        nicht in erster Linie politische-  oder Diskursveranstaltungen. 
+        und wir können nicht immer jede Situation einschätzen. Wir versuchen es trotzdem. 
       </p>
       <p className="mb-4">
-        <Link className="font-bold" href="/">Zurück</Link>
+        <Link className="font-bold" href="/">-&gt; Zurück</Link>
       </p>
     </div>
   </div>
