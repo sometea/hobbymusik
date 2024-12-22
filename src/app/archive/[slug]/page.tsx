@@ -5,7 +5,8 @@ export const dynamicParams = false;
 
 export const revalidate = 60;
 
-export default async function ArchiveSlug({ params }: { params: { slug: string } }) {
+export default async function ArchiveSlug(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const { slug } = params;
   const release = await fetchArchiveBySlug(slug);
   if (!release) return <div>Archive release not found</div>;

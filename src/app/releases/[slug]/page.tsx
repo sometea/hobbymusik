@@ -17,7 +17,8 @@ function getArtistLinkText(href: string): string {
   return 'Artist Link';
 }
 
-export default async function ReleaseSlug({ params }: { params: { slug: string } }) {
+export default async function ReleaseSlug(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const { slug } = params;
   const release = await fetchReleaseBySlug(slug);
   if (!release) return <div>Release not found</div>;
