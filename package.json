@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "test": "echo write tests!"
   },
   "dependencies": {
     "@types/node": "^20.10.5",
