@@ -14,7 +14,7 @@ function getArtistLinkText(href: string): string {
   if (href.includes('facebook.com')) {
     return 'Facebook';
   }
-  return 'Artist Link';
+  return 'Website';
 }
 
 export default async function ReleaseSlug(props: { params: Promise<{ slug: string }> }) {
