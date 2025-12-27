@@ -6,29 +6,30 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "deploy": "firebase deploy",
     "test": "echo write tests!"
   },
   "dependencies": {
     "@types/node": "^20.10.5",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^15.1.2",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.1.1",
     "firebase-admin": "^12.4.0",
-    "next": "15.1.9",
+    "next": "16.1.1",
     "postcss": "^8.4.32",
-    "react": "^19.0.0",
+    "react": "19.2.3",
     "react-cookie-consent": "^9.0.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "19.2.3",
     "swr": "^2.3.0",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
   },
   "overrides": {
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2"
-  }
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
+  },
+  "devDependencies": {}
 }
