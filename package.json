@@ -11,6 +11,7 @@
     "test": "echo write tests!"
   },
   "dependencies": {
+    "@strapi/client": "^1.6.0",
     "@types/node": "^20.10.5",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
@@ -30,6 +31,5 @@
   "overrides": {
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3"
-  },
-  "devDependencies": {}
+  }
 }
