@@ -19,6 +19,8 @@ function mapRelease(release: API.Document): ReleaseProps {
     type: release.type,
     spotifyLink: release.spotify_link,
     releaseNumber: release.label_release_number,
+    copyright: release.copyright,
+    notes: release.notes,
   };
 }
 
