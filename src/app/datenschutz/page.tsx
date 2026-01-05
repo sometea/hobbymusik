@@ -28,9 +28,9 @@ export default function Datenschutz() {
   Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen. Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.
 
   <h2 className="text-xl uppercase my-2">2. HOSTING</h2>
-  Wir hosten die Inhalte unserer Website bei folgendem Anbieter: Google Cloud.
-  Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (nachfolgend Google). Wenn Sie unsere Website besuchen, erfasst Google verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von Google: https://cloud.google.com/terms/cloud-privacy-notice.
-  Die Verwendung von Google erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine
+  Wir hosten die Inhalte unserer Website bei folgendem Anbieter: Bunny.net.
+  Anbieter ist die BunnyWay d.o.o., Dunajska cesta 165, 1000 Ljubljana, Slovenia (nachfolgend Bunny). Wenn Sie unsere Website besuchen, erfasst Bunny verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von Bunny: https://bunny.net/privacy/.
+  Die Verwendung von Bunny erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine
   entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
 
   <h3 className="text-xl uppercase my-2">AUFTRAGSVERARBEITUNG</h3>
