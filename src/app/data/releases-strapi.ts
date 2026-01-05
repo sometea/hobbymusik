@@ -36,6 +36,7 @@ function mapArchive(release: API.Document): ArchiveReleaseProps {
 export const fetchReleases = cache(async () => {
   const releases = await releaseClient.find({
     populate: ['cover'],
+    sort: 'release_date:desc',
   });
   return releases.data.map(mapRelease);
 });
@@ -54,6 +55,7 @@ export const fetchReleaseBySlug = cache(async (slug: string) => {
 export const fetchArchiveReleases = cache(async () => {
   const releases = await archiveClient.find({
     populate: ['cover'],
+    sort: 'release_date:desc',
   });
   return releases.data.map(mapArchive);
 });
