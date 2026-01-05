@@ -1,4 +1,4 @@
-import { ReleaseProps } from "@/app/data/releases";
+import { ReleaseProps } from "../../data/types";
 import Link from "next/link";
 import { ReleaseNumber } from "../releasenumber/releasenumber";
 
