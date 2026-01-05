@@ -54,7 +54,7 @@ export const fetchReleaseBySlug = cache(async (slug: string) => {
 
 export const fetchArchiveReleases = cache(async () => {
   const releases = await archiveClient.find({
-    populate: ['cover'],
+    populate: ['cover', 'download'],
     sort: 'release_date:desc',
   });
   return releases.data.map(mapArchive);
@@ -63,7 +63,7 @@ export const fetchArchiveReleases = cache(async () => {
 export const fetchArchiveBySlug = cache(async (slug: string) => {
   const releases = await archiveClient.find({
     filters: { slug: slug },
-    populate: ['cover'],
+    populate: ['cover', 'download'],
   });
   if (releases.data.length === 0) {
     throw new Error(`Release with slug ${slug} not found`);
