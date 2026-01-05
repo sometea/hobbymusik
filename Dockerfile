@@ -18,6 +18,12 @@ RUN \
 
 # Rebuild the source code only when needed
 FROM base AS builder
+ARG STRAPI_BASE_URL
+ARG STRAPI_PUBLIC_BASE_URL
+ARG STRAPI_TOKEN
+ENV STRAPI_BASE_URL=${STRAPI_BASE_URL}
+ENV STRAPI_PUBLIC_BASE_URL=${STRAPI_PUBLIC_BASE_URL}
+ENV STRAPI_TOKEN=${STRAPI_TOKEN}
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
