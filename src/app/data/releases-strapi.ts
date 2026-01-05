@@ -9,7 +9,7 @@ const archiveClient = client.collection('archive-releases');
 function mapRelease(release: API.Document): ReleaseProps {
   return {
     title: release.title,
-    cover: `${process.env.STRAPI_BASE_URL}${release.cover.url}`,
+    cover: `${process.env.STRAPI_PUBLIC_BASE_URL || process.env.STRAPI_BASE_URL}${release.cover.url}`,
     artist: release.artist,
     year: new Date(release.release_date),
     slug: release.slug,
@@ -25,7 +25,7 @@ function mapRelease(release: API.Document): ReleaseProps {
 function mapArchive(release: API.Document): ArchiveReleaseProps {
   return {
     title: release.title,
-    cover: `${process.env.STRAPI_BASE_URL}${release.cover.url}`,
+    cover: `${process.env.STRAPI_PUBLIC_BASE_URL || process.env.STRAPI_BASE_URL}${release.cover.url}`,
     artist: release.artist,
     year: new Date(release.release_date),
     slug: release.slug,
