@@ -29,7 +29,7 @@ function mapArchive(release: API.Document): ArchiveReleaseProps {
     artist: release.artist,
     year: new Date(release.release_date),
     slug: release.slug,
-    downloadUrl: release.download_url,
+    downloadUrl: `${process.env.STRAPI_PUBLIC_BASE_URL || process.env.STRAPI_BASE_URL}${release.download.url}`,
   };
 }
 
