@@ -1,6 +1,6 @@
 import { BandCampPlayer } from "@/app/components/bandcampplayer/bandcampplayer";
 import { ReleaseNumber } from "@/app/components/releasenumber/releasenumber";
-import { fetchReleaseBySlug, fetchReleases } from "@/app/data/releases";
+import { fetchReleaseBySlug, fetchReleases } from "../../data/releases-strapi";
 import Link from "next/link";
 
 export const dynamicParams = true;

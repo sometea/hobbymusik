@@ -1,7 +1,7 @@
 import { ArchiveList } from "../components/releases/archivelist";
 import { ArchiveRelease, Release } from "../components/releases/release";
 import { ReleaseList } from "../components/releases/releaselist";
-import { fetchArchiveReleases, fetchReleases } from "../data/releases";
+import { fetchArchiveReleases, fetchReleases } from "../data/releases-strapi";
 
 export const revalidate = 180;
 

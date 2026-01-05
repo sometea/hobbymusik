@@ -1,4 +1,4 @@
-import { fetchArchiveBySlug, fetchArchiveReleases, fetchReleases } from "@/app/data/releases";
+import { fetchArchiveBySlug, fetchArchiveReleases } from "../../data/releases-strapi";
 import Link from "next/link";
 
 export const dynamicParams = false;
