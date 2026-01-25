@@ -46,8 +46,8 @@ export default function Datenschutz() {
   <h3 className="text-xl uppercase my-2">HINWEIS ZUR VERANTWORTLICHEN STELLE</h3>
   Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
   David Dasenbrook
-  Sachsenring 67
-  50677 Köln
+  Schöneberger Str. 18
+  10963 Berlin
   E-Mail: info(at)beamtime(dot)net
 
   Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.

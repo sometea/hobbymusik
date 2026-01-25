@@ -19,7 +19,7 @@ export default function Contact() {
       </p>
     </div>
     <div className="m-8 lg:mx-0 text-xs">
-      Inhaltlich verantwortlich: David Dasenbrook, Sachsenring 67, 50677 Köln.
+      Inhaltlich verantwortlich: David Dasenbrook, Schöneberger Str. 18, 10963 Berlin.
       Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir
       keine Haftung für die Inhalte externer Links.
       Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
