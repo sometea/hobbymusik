@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const dynamicParams = false;
 
-export const revalidate = 60;
+export const revalidate = 86400;
 
 export default async function ArchiveSlug(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;

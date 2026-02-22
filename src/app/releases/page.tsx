@@ -3,7 +3,7 @@ import { ArchiveRelease, Release } from "../components/releases/release";
 import { ReleaseList } from "../components/releases/releaselist";
 import { fetchArchiveReleases, fetchReleases } from "../data/releases-strapi";
 
-export const revalidate = 180;
+export const revalidate = 86400;
 
 export default async function Releases() {
   const releases = await fetchReleases();

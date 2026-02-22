@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const dynamicParams = true;
 
-export const revalidate = 180;
+export const revalidate = 86400;
 
 function getArtistLinkText(href: string): string {
   if (href.includes('instagram.com')) {
